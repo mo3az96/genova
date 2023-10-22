@@ -1,5 +1,15 @@
 $(document).ready(function () {
   lazyLoad();
+  if ($(window).width() >= 991) {
+    $(".hero-text").addClass("loaded");
+    sal({
+      once: true,
+    });
+  } else {
+    sal({
+      disabled: true,
+    });
+  }
 
   $(".menu-btn").on("click", function (e) {
     $(".navbar").fadeIn(300);
