@@ -778,8 +778,9 @@ html[dir=rtl] .about-section .bg img {
 }
 @media (max-width: 767px) {
   .about-section .bg {
-    width: 165px;
-    top: 40%;
+    width: 150px;
+    transform: none;
+    top: 135px;
   }
 }
 
@@ -812,6 +813,11 @@ html[dir=rtl] .about-section .bg img {
     width: 100%;
     max-width: 614px;
     margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .about-img {
+    max-width: 335px;
   }
 }
 
