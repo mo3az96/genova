@@ -7,7 +7,6 @@ $(document).ready(function () {
 
   lazyLoad();
   if ($(window).width() >= 991) {
-    $(".hero-text").addClass("loaded");
     sal({
       once: true,
     });
