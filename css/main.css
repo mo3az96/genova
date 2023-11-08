@@ -491,7 +491,6 @@ header {
   }
 }
 .hero-section {
-  aspect-ratio: 1920/870;
   border-end-start-radius: 300px;
   overflow: hidden;
   position: relative;
@@ -506,32 +505,6 @@ header {
     aspect-ratio: unset;
     border-radius: 0 0 100px 100px;
   }
-}
-.hero-section .bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-}
-.hero-section .bg-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 991px) {
-  .hero-section .bg-img img {
-    -o-object-position: 85%;
-       object-position: 85%;
-  }
-}
-html[dir=rtl] .hero-section .bg-img img {
-  transform: scaleX(-1);
-}
-.hero-section .container {
-  height: 100%;
 }
 .hero-section:after {
   content: "";
@@ -554,6 +527,69 @@ html[dir=rtl] .hero-section .bg-img img {
 @media (max-width: 767px) {
   .hero-section:after {
     display: none;
+  }
+}
+.hero-section .swiper-cube-shadow {
+  display: none;
+}
+
+.main-slider .swiper-pagination {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 40px;
+  gap: 8px;
+}
+.main-slider .swiper-pagination .swiper-pagination-bullet {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+.main-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #ce1976;
+  opacity: 1;
+}
+
+.main-slide {
+  aspect-ratio: 1920/870;
+  position: relative;
+}
+.main-slide .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+.main-slide .bg-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 991px) {
+  .main-slide .bg-img img {
+    -o-object-position: 85%;
+       object-position: 85%;
+  }
+}
+html[dir=rtl] .main-slide .bg-img img {
+  transform: scaleX(-1);
+}
+.main-slide .container {
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .main-slide {
+    aspect-ratio: unset;
   }
 }
 
@@ -1350,4 +1386,113 @@ html[dir=rtl] .contact-method:is(a):hover, html[dir=rtl] .contact-method:is(a):f
   color: #ffffff;
   line-height: 1.25;
   margin: 0;
+}
+
+.whats-fixed-btn {
+  position: fixed;
+  bottom: 10px;
+  inset-inline-start: 10px;
+  z-index: 5;
+}
+@media (max-width: 767px) {
+  .whats-fixed-btn {
+    bottom: 10px;
+    inset-inline-start: 10px;
+  }
+}
+.whats-fixed-btn a {
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 36px;
+  cursor: pointer;
+  margin: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+.whats-fixed-btn a:hover {
+  background-color: #075e54;
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  transition: all 0.3s ease-in-out;
+}
+header .header {
+  transition: all 0.3s ease-in-out;
+}
+header .logo {
+  transition: all 0.3s ease-in-out;
+}
+header.fixed {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1019607843);
+}
+header.fixed .header {
+  padding: 20px 0;
+}
+@media (max-width: 1199px) {
+  header.fixed .header {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  header.fixed .header {
+    padding: 7px 0;
+  }
+}
+header.fixed .logo {
+  width: 300px;
+}
+@media (min-width: 1200px) and (max-width: 1429px) {
+  header.fixed .logo {
+    width: 250px;
+  }
+}
+@media (max-width: 1199px) {
+  header.fixed .logo {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  header.fixed .logo {
+    width: 180px;
+  }
+}
+header.fixed .lang {
+  color: #898c98;
+}
+header.fixed .lang:hover {
+  color: #ce1976;
+}
+header.fixed .header-btn {
+  background-color: #ce1976;
+  color: #fff;
+  border-color: #ce1976;
+  width: 150px;
+  height: 40px;
+}
+@media (max-width: 1199px) {
+  header.fixed .header-btn {
+    width: 125px;
+  }
+}
+@media (max-width: 767px) {
+  header.fixed .header-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    background-color: #ce1976;
+    color: #fff;
+  }
+  header.fixed .header-btn:hover, header.fixed .header-btn:focus {
+    background-color: #ce1976;
+    color: #fff;
+  }
 }/*# sourceMappingURL=main.css.map */
